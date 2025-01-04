@@ -1,0 +1,73 @@
+body {
+    background-color: #001f1f; 
+    color: #00ffaa; 
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-title {
+    text-align: center;
+    margin: 20px 0;
+    color: #00ffaa;
+    text-shadow: 0 0 8px #00ffaa, 0 0 16px #004d4d;
+    font-size: 2em;
+}
+
+.metric-card {
+    background: linear-gradient(145deg, #003333, #002222);
+    border: 2px solid #00ffaa;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #00ffaa, inset 0 0 5px #002f2f;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.metric-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00ffaa;
+    text-shadow: 0 0 8px #00ffaa;
+}
+
+.progress-bar {
+    height: 20px;
+    border-radius: 10px;
+    background: #003333;
+    overflow: hidden;
+    border: 1px solid #00ffaa;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffaa, #007a7a);
+    transition: width 0.3s ease-in-out;
+    box-shadow: 0 0 6px #00ffaa;
+}
+
+.chart-container {
+    margin-top: 20px;
+    border: 2px solid #00ffaa;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 0 15px #00ffaa;
+}
+
+h5 {
+    color: #00ffaa;
+    text-shadow: 0 0 6px #00ffaa;
+    text-align: center;
+}
+
+canvas {
+    background-color: #001f1f;
+    border: 1px solid #00ffaa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffaa;
+}
