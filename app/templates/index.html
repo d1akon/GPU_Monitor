@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU Monitor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="dashboard-title">GPU Monitor</h1>
+
+        <!-- Main Metrics -->
+        <div class="row d-flex align-items-stretch">
+            <div class="col-md-3 d-flex">
+                <div class="metric-card flex-fill">
+                    <h4>GPU Usage</h4>
+                    <p id="gpuUsage" class="metric-value">0%</p>
+                    <div class="progress-bar">
+                        <div id="gpuUsageBar" class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex">
+                <div class="metric-card flex-fill">
+                    <h4>Memory Used</h4>
+                    <p id="memoryUsage" class="metric-value">0 / 0 MB</p>
+                    <div class="progress-bar">
+                        <div id="memoryUsageBar" class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex">
+                <div class="metric-card flex-fill">
+                    <h4>Temperature</h4>
+                    <p id="temperature" class="metric-value">0°C</p>
+                    <div class="progress-bar">
+                        <div id="temperatureBar" class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex">
+                <div class="metric-card flex-fill">
+                    <h4>Power Draw</h4>
+                    <p id="powerDraw" class="metric-value">0 / 0 W</p>
+                    <div class="progress-bar">
+                        <div id="powerDrawBar" class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <h5>GPU USAGE</h5>
+                    <canvas id="gpuChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <h5>TEMPERATURE</h5>
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
